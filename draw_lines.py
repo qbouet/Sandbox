@@ -33,19 +33,33 @@ Y_START = 0
 #           [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
 #           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
+# MATRIX = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+#           [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+#           [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
+#           [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0],
+#           [0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0],
+#           [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+#           [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0],
+#           [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+#           [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
+#           [0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0],
+#           [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+#           [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+#           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
 MATRIX = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-          [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-          [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
-          [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0],
-          [0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0],
           [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-          [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0],
-          [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-          [0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
-          [0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0],
           [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-          [0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+          [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+          [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
+          [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+          [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+          [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
 
 # x = X_START
 # y = Y_START
@@ -74,6 +88,7 @@ def main():
     # while there still "1"s in the matrix
     while check(MATRIX):
         # find first "1" in matrix
+        print("LOWER")
         x = -1
         y = -1
         exit_loop = 0
@@ -83,22 +98,18 @@ def main():
             for value in row:
                 x += 1
                 if value == 1:
-                    print(x + 1, y + 1)
+                    give_instructions(position, x, y)
                     position = [x + 1, y + 1]
+                    # print(x + 1, y + 1)
                     MATRIX[y][x] = 2
                     exit_loop = 1
                     break
             if exit_loop == 1:
                 break
-        print("loop exited")
-
-        baby_matrix = [[MATRIX[y - 1][x - 1], MATRIX[y - 1][x], MATRIX[y - 1][x + 1]],
-                       [MATRIX[y][x - 1], MATRIX[y][x], MATRIX[y][x + 1]],
-                       [MATRIX[y + 1][x - 1], MATRIX[y + 1][x], MATRIX[y + 1][x + 1]]]
-        print(baby_matrix)
+        # print("loop exited")
 
         # go to next "1" in clockwise direction if there is one closeby
-        while check(baby_matrix):
+        while True:
 
             # 0  0  0
             # 0 "1" 1
@@ -152,15 +163,14 @@ def main():
                 y += -1
                 x += 1
 
-            baby_matrix = [[MATRIX[y - 1][x - 1], MATRIX[y - 1][x], MATRIX[y - 1][x + 1]],
-                           [MATRIX[y][x - 1], MATRIX[y][x], MATRIX[y][x + 1]],
-                           [MATRIX[y + 1][x - 1], MATRIX[y + 1][x], MATRIX[y + 1][x + 1]]]
+            else:
+                break
 
             give_instructions(position, x, y)
-
             position = [x + 1, y + 1]
-            print(x + 1, y + 1)
+            # print(x + 1, y + 1)
             MATRIX[y][x] = 2
+        print("RAISE")
     # print matrix
     for row in MATRIX:
         print(row)
