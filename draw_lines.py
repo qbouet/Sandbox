@@ -98,8 +98,7 @@ def main():
             for value in row:
                 x += 1
                 if value == 1:
-                    give_instructions(position, x, y)
-                    position = [x + 1, y + 1]
+
                     # print(x + 1, y + 1)
                     MATRIX[y][x] = 2
                     exit_loop = 1
@@ -187,14 +186,22 @@ def check(matrix):
 
 def give_instructions(position, x, y):
     """Send instructions to pico"""
-    if position[0] == x:
-        print("MOVE RIGHT")
-    elif position[0] == x + 2:
-        print("MOVE LEFT")
-    if position[1] == y:
-        print("MOVE DOWN")
-    elif position[1] == y + 2:
-        print("MOVE UP")
+    if position[0] >= x:
+        while position[0] != x:
+            print("MOVE RIGHT")
+            position[0] += -1
+    elif position[0] <= x + 2:
+        while position[0] != x:
+            print("MOVE LEFT")
+            position[0] += 1
+    if position[1] >= y:
+        while position[1] != y:
+            print("MOVE DOWN")
+            position[1] += -1
+    elif position[1] <= y + 2:
+        while position[1] != y:
+            print("MOVE UP")
+            position[1] += 1
 
 
 main()
