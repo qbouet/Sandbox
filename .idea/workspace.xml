@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec53679-c298-48f8-b5ba-7a376ecd7ca3" name="Changes" comment="Add list files program" />
+    <list default="true" id="eec53679-c298-48f8-b5ba-7a376ecd7ca3" name="Changes" comment="draw lines program created">
+      <change afterPath="$PROJECT_DIR$/make_matrix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_lines.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_lines.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="text" />
         <option value="Python Script" />
       </list>
     </option>
@@ -55,6 +61,16 @@
       <workItem from="1695260687135" duration="1310000" />
       <workItem from="1695262104828" duration="345000" />
       <workItem from="1695262458285" duration="693000" />
+      <workItem from="1695263164336" duration="787000" />
+      <workItem from="1695958384069" duration="369000" />
+      <workItem from="1696210450591" duration="605000" />
+      <workItem from="1697964188299" duration="15000" />
+      <workItem from="1697964243996" duration="9716000" />
+      <workItem from="1698013783958" duration="9270000" />
+      <workItem from="1698125581726" duration="661000" />
+      <workItem from="1698131549814" duration="1602000" />
+      <workItem from="1698144647393" duration="1161000" />
+      <workItem from="1698187182741" duration="3816000" />
     </task>
     <task id="LOCAL-00001" summary="Add starter file">
       <option name="closed" value="true" />
@@ -80,7 +96,55 @@
       <option name="project" value="LOCAL" />
       <updated>1695261816274</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add list files program">
+      <option name="closed" value="true" />
+      <created>1695263182873</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695263182873</updated>
+    </task>
+    <task id="LOCAL-00005" summary="draw lines program created">
+      <option name="closed" value="true" />
+      <created>1697975641311</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697975641311</updated>
+    </task>
+    <task id="LOCAL-00006" summary="draw lines program created">
+      <option name="closed" value="true" />
+      <created>1698015617747</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698015617747</updated>
+    </task>
+    <task id="LOCAL-00007" summary="draw lines program created">
+      <option name="closed" value="true" />
+      <created>1698017780987</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017780987</updated>
+    </task>
+    <task id="LOCAL-00008" summary="draw lines program created">
+      <option name="closed" value="true" />
+      <created>1698024564273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698024564273</updated>
+    </task>
+    <task id="LOCAL-00009" summary="draw lines program created">
+      <option name="closed" value="true" />
+      <created>1698051519109</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698051519109</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,10 +165,15 @@
     <MESSAGE value="Add starter file" />
     <MESSAGE value="Add password check program" />
     <MESSAGE value="Correct password check program" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct password check program" />
+    <MESSAGE value="Add list files program" />
+    <MESSAGE value="draw lines program created" />
+    <option name="LAST_COMMIT_MESSAGE" value="draw lines program created" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Sandbox$draw_lines.coverage" NAME="draw_lines Coverage Results" MODIFIED="1698051375983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/draw_lines_py$draw_lines.coverage" NAME="draw_lines Coverage Results" MODIFIED="1698193119932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sandbox$password_stars.coverage" NAME="password_stars Coverage Results" MODIFIED="1695261782781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/draw_lines_py$make_matrix.coverage" NAME="make_matrix Coverage Results" MODIFIED="1698192878936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Sandbox$list_files.coverage" NAME="list_files Coverage Results" MODIFIED="1695262953924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
